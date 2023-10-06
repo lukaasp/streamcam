@@ -90,7 +90,7 @@ PAGE = """\
     <button onClick='snap()'>Snapshot</button>
     <button onClick='list()'>List</button>
     <img src="stream.mjpg" width="960" height="540"  alt="meeeh"/>
-    <img id="preview" width="960" height="540" alt="Preview"/>
+    <img id="preview" width="480" height="270" alt="Preview"/>
 </p>
 
 <p id="piclist">
