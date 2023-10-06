@@ -1,2 +1,7 @@
 # streamcam
 Python3 application for streaming video &amp; taking screenshots with official rpi camera v3
+
+
+- just run ```python streamcam.py```, app will be available on port 8000
+- "Snapshot" button will take a photo storing it in current app and previews it
+- "List" button will show you all jpg files in current app directory
