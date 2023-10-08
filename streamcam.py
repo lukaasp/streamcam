@@ -14,6 +14,7 @@ from gpiozero import CPUTemperature
 from picamera2 import Picamera2
 from picamera2.encoders import MJPEGEncoder
 from picamera2.outputs import FileOutput
+from libcamera import controls
 
 PAGE = """\
 <!DOCTYPE html>
@@ -193,8 +194,10 @@ class StreamingServer(socketserver.ThreadingMixIn, server.HTTPServer):
 
 picam2 = Picamera2()
 picam2.configure(picam2.create_video_configuration(main={"size": (1920, 1080)}))
+picam2.set_controls({"FrameRate": 25, "AfMode": controls.AfModeEnum.Continuous})
 output = StreamingOutput()
 picam2.start_recording(MJPEGEncoder(), FileOutput(output))
+
 
 def snap():
     timestamp = time.strftime("%Y%m%d-%H%M%S")
