@@ -8,4 +8,4 @@ Python3 application for streaming video &amp; taking screenshots with official r
 - "Temp" button will read actual CPU temperature and sets i as button text
 
 
-!!!Important - This code has been tested on RPI Zero 2 W, and cause it to overheat within 10 minutes - you will need passing cooling to manage this.
+!!!Important - This code has been tested on RPI Zero 2 W, and cause it to overheat within 10 minutes - you will need passive cooling to manage this.
